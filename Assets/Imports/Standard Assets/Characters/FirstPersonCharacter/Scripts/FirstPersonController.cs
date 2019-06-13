@@ -42,6 +42,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public float RunSpeed { get => m_RunSpeed; set => m_RunSpeed = value; }
+        public AudioClip JumpSound { get => m_JumpSound; set => m_JumpSound = value; }
+        public AudioClip LandSound { get => m_LandSound; set => m_LandSound = value; }
+        public bool UseFovKick { get => m_UseFovKick; set => m_UseFovKick = value; }
+        public float JumpSpeed { get => m_JumpSpeed; set => m_JumpSpeed = value; }
+        public float WalkSpeed { get => m_WalkSpeed; set => m_WalkSpeed = value; }
+        public bool UseHeadBob { get => m_UseHeadBob; set => m_UseHeadBob = value; }
+        public AudioClip[] FootstepSounds { get => m_FootstepSounds; set => m_FootstepSounds = value; }
+        public float GravityMultiplier { get => m_GravityMultiplier; set => m_GravityMultiplier = value; }
+        public float RunstepLenghten { get => m_RunstepLenghten; set => m_RunstepLenghten = value; }
+        public float StickToGroundForce { get => m_StickToGroundForce; set => m_StickToGroundForce = value; }
+        public MouseLook MouseLook { get => m_MouseLook; set => m_MouseLook = value; }
+        public float StepInterval { get => m_StepInterval; set => m_StepInterval = value; }
+
         // Use this for initialization
         private void Start()
         {

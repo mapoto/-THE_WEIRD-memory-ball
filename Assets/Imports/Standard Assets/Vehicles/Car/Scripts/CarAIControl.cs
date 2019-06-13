@@ -45,6 +45,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_AvoidPathOffset;          // direction (-1 or 1) in which to offset path to avoid other car, whilst avoiding
         private Rigidbody m_Rigidbody;
 
+        public bool StopWhenTargetReached { get => m_StopWhenTargetReached; set => m_StopWhenTargetReached = value; }
 
         private void Awake()
         {

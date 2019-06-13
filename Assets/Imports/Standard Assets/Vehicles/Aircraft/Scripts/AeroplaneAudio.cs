@@ -34,6 +34,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private AeroplaneController m_Plane;      // Reference to the aeroplane controller.
         private Rigidbody m_Rigidbody;
 
+        public AudioClip EngineSound { get => m_EngineSound; set => m_EngineSound = value; }
+        public AudioClip WindSound { get => m_WindSound; set => m_WindSound = value; }
 
         private void Awake()
         {

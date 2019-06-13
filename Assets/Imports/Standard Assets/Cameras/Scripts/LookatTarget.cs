@@ -27,6 +27,8 @@ namespace UnityStandardAssets.Cameras
 
         protected Vector3 m_FollowVelocity;
 
+        public Vector2 RotationRange { get => m_RotationRange; set => m_RotationRange = value; }
+
 
         // Use this for initialization
         protected override void Start()

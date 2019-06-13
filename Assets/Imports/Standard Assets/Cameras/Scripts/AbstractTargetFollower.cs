@@ -100,5 +100,7 @@ namespace UnityStandardAssets.Cameras
         {
             get { return m_Target; }
         }
+
+        public UpdateType UpdateType1 { get => m_UpdateType; set => m_UpdateType = value; }
     }
 }

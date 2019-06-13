@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Utility
         public WaypointCircuit.RoutePoint targetPoint { get; private set; }
         public WaypointCircuit.RoutePoint speedPoint { get; private set; }
         public WaypointCircuit.RoutePoint progressPoint { get; private set; }
+        public WaypointCircuit Circuit { get => circuit; set => circuit = value; }
 
         public Transform target;
 

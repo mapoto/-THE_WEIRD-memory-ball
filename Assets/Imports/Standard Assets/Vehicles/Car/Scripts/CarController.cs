@@ -54,6 +54,15 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed{get { return m_Topspeed; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
+        public float MaximumSteerAngle { get => m_MaximumSteerAngle; set => m_MaximumSteerAngle = value; }
+        public float SteerHelper1 { get => m_SteerHelper; set => m_SteerHelper = value; }
+        public float FullTorqueOverAllWheels { get => m_FullTorqueOverAllWheels; set => m_FullTorqueOverAllWheels = value; }
+        public float TractionControl1 { get => m_TractionControl; set => m_TractionControl = value; }
+        public float SlipLimit { get => m_SlipLimit; set => m_SlipLimit = value; }
+        internal SpeedType SpeedType { get => m_SpeedType; set => m_SpeedType = value; }
+        public Vector3 CentreOfMassOffset { get => m_CentreOfMassOffset; set => m_CentreOfMassOffset = value; }
+        public float BrakeTorque { get => m_BrakeTorque; set => m_BrakeTorque = value; }
+        public float ReverseTorque { get => m_ReverseTorque; set => m_ReverseTorque = value; }
 
         // Use this for initialization
         private void Start()
