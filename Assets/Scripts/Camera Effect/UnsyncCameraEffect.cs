@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
-public class UnsyncShader : MonoBehaviour
+public class UnsyncCameraEffect : MonoBehaviour
 {
     public float speed = 1;
     private float position = 0;
