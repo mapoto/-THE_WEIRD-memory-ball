@@ -15,8 +15,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Ball
+  - Character
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Particle
     uniqueID: 809501915
+    locked: 0
+  - name: Character
+    uniqueID: 57410605
     locked: 0
