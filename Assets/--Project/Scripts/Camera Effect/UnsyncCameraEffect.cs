@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
 public class UnsyncCameraEffect : MonoBehaviour
 {
     public float speed = 1;
