@@ -13,7 +13,7 @@ public class UnsyncCameraEffect : MonoBehaviour
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        position += speed * 0.1f * Time.deltaTime;
+        position += speed * 1f * Time.deltaTime;
         position = position%1f;
         material.SetFloat("_ValueX", position);
 

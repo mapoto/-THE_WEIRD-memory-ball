@@ -2,7 +2,7 @@
 
 public class ParticleController : MonoBehaviour
 {
-    Transform ball;
+    public GameObject ball;
     Quaternion lastRotation;
     Quaternion actualRotation;
     ParticleSystem ps;
@@ -12,14 +12,13 @@ public class ParticleController : MonoBehaviour
     void Awake()
     {
         ps = GetComponent<ParticleSystem>();
-        ball = GetComponentInParent<Transform>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
 
-        lastRotation = ball.rotation;
+        lastRotation = ball.transform.rotation;
 
     }
 
@@ -49,7 +48,7 @@ public class ParticleController : MonoBehaviour
 
     bool isRotated()
     {
-        actualRotation = ball.rotation;
+        actualRotation = ball.transform.rotation;
         if (!actualRotation.Equals(lastRotation))
         {
             lastRotation = actualRotation;
