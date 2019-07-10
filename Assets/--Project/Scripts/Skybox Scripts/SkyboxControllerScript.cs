@@ -13,25 +13,28 @@ public class SkyboxControllerScript : MonoBehaviour
 
     void Update()
     {
-
-        if (!RotationDetector.rotated)
+        if (!Starter.triggered)
         {
+            if (!RotationDetector.rotated)
+            {
 
-            PauseSkybox();
+                PauseSkybox();
+            }
+            else
+            {
+                RewindSkybox();
+            }
         }
-        else
-        {
-            RewindSkybox();
-        }
+
     }
 
     public void PauseSkybox()
     {
-        RenderSettings.skybox = skyboxMaterials[0];
-
         float lerp = (Mathf.PingPong(Time.time, 2f)) + 1f;
         int rot = (int)(Random.Range(90, 100) * Time.deltaTime);
 
+        Material temp = skyboxMaterials[0];
+        RenderSettings.skybox = temp;
         RenderSettings.skybox.SetFloat("_Exposure", lerp);
         RenderSettings.skybox.SetFloat("_Rotation", rot);
         DynamicGI.UpdateEnvironment();
@@ -45,6 +48,7 @@ public class SkyboxControllerScript : MonoBehaviour
         RenderSettings.skybox = skyboxMaterials[1];
         RenderSettings.skybox.SetFloat("_Rotation", rot);
         DynamicGI.UpdateEnvironment();
+
     }
 
 
